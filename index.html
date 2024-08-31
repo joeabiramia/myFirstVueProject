@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div @click="changemyname('the powerful developer')" style="color: red;">Click here to change the name</div>
+        <div>
+            <p>{{ name }} - {{ lastName }} - {{ age }} - {{ email }}</p>
+            <button @click="age++">Increase the age</button>
+            <button @click="age--">Decrease the age</button><br>
+            <button @click="email = 'chafik@gmail.com'">Change the email</button>
+        </div>
+
+        <!-- Uncomment this section if you need event handling -->
+        <!-- 
+        <div class="box" @mouseover="handleEvent('Mouse Over')">Mouse Over</div>
+        <div class="box" @dblclick="handleEvent()">Double Click</div>
+        <div class="box" @mouseleave="handleEvent()">Mouse Leave</div>
+        <div class="box" @mousemove="handleEvent()">Mouse Move</div> 
+        -->
+        
+        <ul>
+            <li v-for="(book, index) in books" :key="index" :class="{fav : book.isFav}" class="li" @dblclick="addToFavorite(book)">
+                <img :src="book.img" :alt="book.title"> 
+                <h3>{{ book.title }}</h3> 
+                <p>{{ book.author }}</p>
+            </li>
+            
+        </ul>
+
+        <div>
+            <a :href="url" target="_blank">Best website ever</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

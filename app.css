@@ -1,0 +1,23 @@
+.box {
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #5802f947;
+    border-radius: 10px;
+}
+
+.li{
+    list-style-type: none;
+    background-color: #5802f947;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.li.fav{
+    background-color: #f8f005;
+    color: blue;
+}
